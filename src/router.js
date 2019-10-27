@@ -60,10 +60,10 @@ export default new Router({
       name: 'info',
       component: B3Info,
     },
-    {
-      path: '/my',
-      name: 'my',
-      component: B4,
-    },
+    // {
+    //   path: '/my',
+    //   name: 'my',
+    //   component: B4,
+    // },
   ]
 })

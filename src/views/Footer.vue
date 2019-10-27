@@ -22,12 +22,12 @@
         </div> -->
         <div>小贴士</div>
       </router-link>
-      <router-link to="/my" tag="li">
-        <!-- <div>
+      <!-- <router-link to="/my" tag="li">
+        <div>
           <i class="icon iconfont icon-gouwucheman"></i>
-        </div> -->
+        </div>
         <div>我的</div>
-      </router-link>
+      </router-link> -->
     </ul>
   </div>
 </template>
