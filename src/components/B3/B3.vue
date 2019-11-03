@@ -11,10 +11,10 @@
         <el-button type="primary" @click="$router.push('/zzjs')">种植技术</el-button>
       </el-row>
       <el-row type="flex" align="middle">
-        <el-button type="primary">尾菜堆肥</el-button>
+        <el-button type="primary" @click="weicai()">尾菜堆肥</el-button>
       </el-row>
       <el-row type="flex" align="middle" >
-        <el-button type="primary" @click="test"
+        <el-button type="primary" @click="gaowen()"
           >高温闷棚</el-button
         >
       </el-row>
@@ -30,7 +30,12 @@ export default {
     };
   },
   methods: {
-
+    weicai(){
+      window.open('http://182.92.164.58:8080/尾菜堆肥.pdf')
+    },
+    gaowen(){
+       window.open('http://182.92.164.58:8080/高温闷棚.pdf')
+    }
   }
 };
 </script>

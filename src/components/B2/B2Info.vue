@@ -12,14 +12,14 @@
           <h4>物料</h4>
           <el-row>
             <el-col :span="10" style="margin-right:10px">
-              <img style="width:100%;height:110px" src="http://182.92.164.58:8080/高温闷棚-1-撒有机物料.jpg" />
-              <img v-if="feibian!='不选择'" style="width:100%;height:110px" src="http://182.92.164.58:8080/高温闷棚-2-畜禽粪便.jpg" />
+              <img style="width:100%;height:120px" src="http://182.92.164.58:8080/高温闷棚-1-撒有机物料.jpg" />
+              <img v-if="feibian!='不选择'" style="width:100%;height:120px" src="http://182.92.164.58:8080/高温闷棚-2-畜禽粪便.jpg" />
             </el-col>
             <el-card :body-style="{ padding: '0px' }">
-              <p>将所有的蔬菜废弃物与{{first}}公斤{{jiegan}}等利用器械成 <br/> 3-5 cm，均匀铺洒在土壤表面</p>
+              <p>将所有的蔬菜废弃物与{{second}}公斤{{jiegan}}等利用器械成 <br/> 3-5 cm，均匀铺洒在土壤表面</p>
             </el-card>
             <el-card :body-style="{ padding: '0px' }" v-if="feibian!='不选择'" >
-              <p >将{{second}}公斤{{feibian}}均匀铺撒在有机物料表面,均匀喷洒菌剂</p>
+              <p >将{{first}}公斤{{feibian}}均匀铺撒在有机物料表面,均匀喷洒菌剂</p>
             </el-card>
           </el-row>
         </el-timeline-item>
@@ -27,7 +27,7 @@
           <h4>灌水</h4>
           <el-row>
             <el-col :span="10" style="margin-right:10px">
-              <img style="width:100%;height:110px" src="http://182.92.164.58:8080/高温闷棚-3-施菌剂.jpg" />
+              <img style="width:100%;height:120px" src="http://182.92.164.58:8080/高温闷棚-3-施菌剂.jpg" />
             </el-col>
             <el-card :body-style="{ padding: '0px' }">
               <p>对棚室内土壤或基质进行灌水至充分湿润，相对湿度达到85%左右，地表无明水，用水攥土壤不散即可</p>
@@ -38,7 +38,7 @@
           <h4>覆盖</h4>
           <el-row>
             <el-col :span="10" style="margin-right:10px">
-              <img style="width:100%;height:110px" src="http://182.92.164.58:8080/高温闷棚-4-覆盖.jpg" />
+              <img style="width:100%;height:120px" src="http://182.92.164.58:8080/高温闷棚-4-覆盖.jpg" />
             </el-col>
             <el-card :body-style="{ padding: '0px' }">
               <p>选用地膜或整块塑料薄膜进行地面覆盖，搭接严密无漏缝。</p>
@@ -49,7 +49,7 @@
           <h4>闷棚</h4>
           <el-row>
             <el-col :span="10" style="margin-right:10px">
-              <img style="width:100%;height:110px" src="http://182.92.164.58:8080/高温闷棚-5-闷棚.jpg" />
+              <img style="width:100%;height:120px" src="http://182.92.164.58:8080/高温闷棚-5-闷棚.jpg" />
             </el-col>
             <el-card :body-style="{ padding: '0px' }">
               <p>棚室密闭后，保持棚内高温高湿状态25-30天，其中至少有累计15天以上的晴热天气。</p>
@@ -103,7 +103,7 @@ export default {
 }
 .el-row {
   > .el-card {
-    height: 100px;
+    height: 110px;
     margin: 5px 0 10px 0;
     .el-card__body {
       p {

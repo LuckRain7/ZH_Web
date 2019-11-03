@@ -7,8 +7,8 @@
 
     <!-- 表单 -->
     <div style="height:40px;"></div>
-    <el-form :model="ruleForm" ref="ruleForm" class="demo-ruleForm">
-      <el-form-item label="蔬菜名称" prop="region">
+    <el-form :model="data" ref="ruleForm" class="demo-ruleForm">
+      <el-form-item label="蔬菜名称" prop="shucaimingcheng">
         <br />
         <el-select
           v-model="data.shucaimingcheng"
@@ -23,8 +23,10 @@
 
       <el-form-item
         label="种植面积(亩)"
-        prop="age"
-        :rules="[{ type: 'number', message: '必须为数字值' }]"
+        prop="zhongzhimianji"
+        :rules="[
+         { required: true, message: '请填写种植面积', trigger: 'blur' },
+        { type: 'number', message: '必须为数字值',trigger: 'blur' }]"
       >
         <br />
         <el-input
@@ -35,7 +37,7 @@
         ></el-input>
       </el-form-item>
 
-      <el-form-item label="农作物秸秆" prop="region">
+      <el-form-item label="农作物秸秆" prop="fuliao2">
         <br />
         <el-select
           v-model="data.fuliao2"
@@ -48,7 +50,7 @@
         </el-select>
       </el-form-item>
 
-      <el-form-item label="畜禽粪便" prop="region">
+      <el-form-item label="畜禽粪便" prop="fuliao1">
         <br />
         <el-select
           v-model="data.fuliao1"
@@ -135,17 +137,6 @@ export default {
         小麦秸秆: { e: 0.416, d: 0.006 },
         树叶: { e: 0.49, d: 0.02 },
         木屑: { e: 0.492, d: 0.001 }
-      },
-      ruleForm: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: "",
-        age: 1
       }
     };
   },
@@ -206,7 +197,7 @@ export default {
       return this.keepTwoDecimal(result);
     },
     keepTwoDecimal(number) {
-      return Number(number.toFixed(2));
+      return Number(number.toFixed(1));
     }
   }
 };

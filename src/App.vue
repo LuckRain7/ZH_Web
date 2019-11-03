@@ -19,31 +19,12 @@ export default {
 };
 </script>
 <style lang="scss">
-#app {
+html,
+body,
+#app,
+.el-container{
+  margin: 0;
+  padding: 0;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.nav {
-  height: 80px;
-  line-height: 80px;
-  display: flex;
-  text-align: center;
-  bottom: 0;
-}
-.nav-item {
-  flex: 1;
-  text-decoration: none;
-}
-.nav-item:link,
-.nav-item:visited {
-  background-color: white;
-  color: black;
-}
-.nav-item:hover,
-.nav-item:active {
-  color: white;
-  background-color: #c8c6c6;
 }
 </style>

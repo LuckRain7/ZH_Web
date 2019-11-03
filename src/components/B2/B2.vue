@@ -21,7 +21,9 @@
         </el-select>
       </el-form-item>
 
-      <el-form-item required label="大棚面积(亩)" prop="shucaimingcheng">
+      <el-form-item required  label="大棚面积(亩)" prop="zhongzhimianji"
+      :rules="[{ type: 'number', message: '必须为数字值' }]"
+      >
         <br />
         <el-input
           placeholder="请输入种植面积"
@@ -61,6 +63,7 @@
         <el-form-item
           label="现有重量(公斤)"
           :rules="[{ type: 'number', message: '必须为数字值' }]"
+          prop="m"
         >
           <br />
           <el-input
@@ -148,17 +151,6 @@ export default {
         小麦秸秆: { e: 0.416, d: 0.006 },
         树叶: { e: 0.49, d: 0.02 },
         木屑: { e: 0.492, d: 0.01 }
-      },
-      ruleForm: {
-        name: "",
-        region: "",
-        date1: "",
-        date2: "",
-        delivery: false,
-        type: [],
-        resource: "",
-        desc: "",
-        age: 1
       }
     };
   },
@@ -209,7 +201,7 @@ export default {
       return this.keepTwoDecimal(result);
     },
     keepTwoDecimal(number) {
-      return Number(number.toFixed(2));
+      return Number(number.toFixed(1));
     }
   },
   computed: {

@@ -358,4 +358,7 @@ export default {
 .el-page-header{
   margin-top:20px;
 }
+.el-button{
+  width: 100%
+}
 </style>

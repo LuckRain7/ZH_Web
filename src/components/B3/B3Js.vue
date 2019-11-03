@@ -194,4 +194,7 @@ export default {
   // line-height: 80px !important
   margin-top: 20px;
 }
+.el-button{
+  width: 100%
+}
 </style>
